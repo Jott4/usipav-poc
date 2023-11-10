@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3.8"
+    ports:
+      - "5672:5672"  # Porta para comunicação com RabbitMQ
+      - "15672:15672"  # Porta para o painel de controle (opcional)
+    environment:
+      RABBITMQ_DEFAULT_USER: "user"
+      RABBITMQ_DEFAULT_PASS: "password"
